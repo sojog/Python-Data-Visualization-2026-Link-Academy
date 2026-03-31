@@ -1,0 +1,13 @@
+# Schimba PROJECT_NAME cu numele proiectului
+WorldProject:  
+        # Schimba APP_NAME1 cu numele aplicatiei
+        PopulationApp:
+
+            - view_name: all_countries
+              url_path_name: all
+              template_name: all_countries
+
+            - view_name: choose_countries
+              url_path_name: choose
+              template_name: choose_countries
+

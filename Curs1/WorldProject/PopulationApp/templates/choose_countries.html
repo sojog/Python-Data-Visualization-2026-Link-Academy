@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose_countries</title>
+</head>
+<body>
+    <h1>choose_countries</h1>
+
+    <form action="" method="post">
+            {% csrf_token %}
+
+            {% for country in countries %}
+                        <div>
+                        <input type="checkbox" name="{{country}}" id="">
+                        <label for="{{country}}">{{country}}</label>
+                    </div>
+            {% endfor %}
+        
+
+        <input type="submit" value="Choose">
+    </form>
+    {% if created_image %}
+            <img src="data:image/jpeg;base64,{{created_image}}" alt="">
+    {% else %}
+    {% endif %}
+
+
+</body>
+</html>
